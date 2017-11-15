@@ -1,0 +1,46 @@
+.personal-logo{
+	font-size: 16px;
+	font-family: "Fredoka One", cursive;
+	color: #9a9da2;
+}
+.personal-logo span{
+	font-size: 30px;
+	color: #2196f3;
+}
+nav, footer{
+	background-color: #263238!important;
+}
+.brand-logo{
+	margin-left: 15px;
+}
+body{
+	background: url('/assets/background.png') no-repeat center center fixed;
+	background-size: cover;
+	position: relative;
+}
+#about-top{
+	height: 200px;
+	background-color: #222222;
+	position: relative;
+	margin-bottom: 152px;
+}
+#about-top-perso{
+	position: absolute;
+	transform: translate(-50%);
+	left: 50%;
+	bottom: -128px;
+	background: url('https://clement-loire.fr/resources/images/private/clement.jpg') center no-repeat;
+	height: 256px;
+	width: 256px;
+	background-size: 100%;
+}
+main{
+	background-color: rgba(0, 0, 0, 0.6);
+}
+#about, #skills, #portfolio{
+	overflow: auto;
+	margin-bottom: 0;
+}
+html{
+	color: white !important;
+}
