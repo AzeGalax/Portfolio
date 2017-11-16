@@ -1,0 +1,188 @@
+@media screen and (max-width: 768px){
+    .contain_title_border{
+        margin: 0 0;
+        padding-top: 10px;
+    }
+
+    .title_border {
+        clear: both;
+        margin: 2px 0;
+        margin: 2px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .title_border:hover{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1600px){
+
+
+
+    #myCarousel .item img{
+        max-width: none;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1120px){
+    .carousel_btn_first, .carousel_btn_second{
+        display: none;
+    }
+
+    .carousel_texte{
+        top: 20%;
+        left: 250px;
+        position: absolute;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .carousel_texte{
+        top: 20%;
+        left: 150px;
+        position: absolute;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    #features .col-lg-4{
+        width: 50%;
+        margin: auto;
+        margin-bottom: 70px;
+    }
+
+    #features img{
+        padding-bottom: 10px;
+        display: block;
+        text-align: center;
+    }
+
+    #meettheteam > div > div:nth-child(3){
+        width: 28%;
+        margin-right: 220px;
+        margin-bottom: 50px;
+    }
+
+    #meettheteam > div > div:nth-child(4){
+        width: 28%;
+        margin-bottom: 50px;
+    }
+
+    #meettheteam > div > div:nth-child(5){
+        width: 28%;
+        margin-right: 220px;
+    }
+
+    #meettheteam > div > div:nth-child(6){
+        width: 28%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    #meettheteam > div > div:nth-child(3), #meettheteam > div > div:nth-child(4), #meettheteam > div > div:nth-child(5), #meettheteam > div > div:nth-child(6){
+        width: 36%;
+        margin-bottom: 30px;
+        margin-right: 0px;
+    }
+    #meettheteam > div > div:nth-child(3), #meettheteam > div > div:nth-child(5){
+        margin-right: 150px;
+    }
+}
+
+@media screen and (max-width: 425px){
+    #meettheteam > div > div:nth-child(3), #meettheteam > div > div:nth-child(4), #meettheteam > div > div:nth-child(5), #meettheteam > div > div:nth-child(6){
+        width: 69%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    #lovelywork > div > div:nth-child(3), #lovelywork > div > div:nth-child(4), #lovelywork > div > div:nth-child(5), #lovelywork > div > div:nth-child(6), #lovelywork > div > div:nth-child(7), #lovelywork > div > div:nth-child(8), #lovelywork > div > div:nth-child(9){
+        width: 70%;
+        margin-left: 18%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    #stayintouch form{
+        top: 0px;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .fa_container i{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px){
+    #myCarousel > div > div > div > div > p{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px){
+    #lovelywork > div > div > i, #lovelywork > div > div > div{
+        display: none;
+    }
+    #stayintouch .map{
+        display: none;
+    }
+
+    #stayintouch .map_mobile{
+        display: block;
+    }
+
+
+}
+
+@media screen and (max-width: 1200px){
+    #stayintouch > div:nth-child(4) > form > div:nth-child(1) > label{
+        padding-right: 30px;
+    }
+
+    #stayintouch > div:nth-child(4) > form > div:nth-child(2) > label{
+        padding-right: 23px;
+    }
+    #stayintouch > div:nth-child(4) > form > div:nth-child(2){
+        padding-bottom: 18px;
+    }
+
+    #stayintouch > div:nth-child(4) > form > div:nth-child(3) > label{
+        padding-right: 3px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    #message{
+        width: 300px;
+        height: 130px;
+    }
+    
+    #features > div > div{
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+@media screen and (max-width: 1200px){
+    #lovelywork .col-lg-4:hover .work_text{
+        top: 63%;
+        width: 91%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    #stayintouch form{
+        background-color: #F9FAFA;
+        margin-top: 15px;
+    }
+    #stayintouch > div:nth-child(4) > form > div:nth-child(3){
+        position: relative;
+        top: -25px;
+    }
+    #stayintouch > div:nth-child(4) > form > div:nth-child(4) > button{
+        position: relative;
+    }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The galax's WEB</title>
+		<meta charset="UTF-8"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<link rel="icon" href="image/icon.png"/>
+		<link rel="stylesheet" type="text/css" href="css/custom.css" media="screen"/>
+		<link rel="stylesheet" type="text/css" href="css/mediaqueries.css" media="screen"/>
+		<link href="css/bootstrap_custom.css" rel="stylesheet"/>
+		<link href='https://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Gentium+Book+Basic' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
+		<script src="js/loader.js"></script>
+	</head>
+	<body>
+		<div id="chargement">Votre page est en cours de chargement<br/><span id="chargement-infos"></span></div>
+		<div id="after">
+			<header class="col-lg-12"><!--Header-->
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+					<a href="index.html"><img src="image/logo.png" alt="Icone Galax's WEB"/></a>
+				</div>
+				<nav class="col-lg-8 col-md-8 col-sm-4 col-xs-12"><!--Menu-->
+					<ul>
+						<li><a href="#"><span>A propos</span></a></li>
+						<li><a href="#"><span>Portfolio</span></a></li>
+						<li><a href="#"><span>Mes idées, mes créations</span></a></li>
+					</ul>
+				</nav><!--/Menu-->
+			</header><!--/Header-->
+			<section class="col-lg-12" id="accueil"><!--Accueil-->
+				<img src="image/construction.gif" class="img_enconstruction"/>
+				<h1>Bienvenue sur mon site!</h1>
+					<ul>
+						<li><a href="#"><span>A propos</span></a></li>
+						<li><a href="#"><span>Portfolio</span></a></li>
+						<li><a href="#"><span>Mes idées, mes créations</span></a></li>
+					</ul>
+			</section><!--/Accueil-->
+			<footer class="col-lg-12"><!--Footer-->
+			<div class="container">
+				<h2>Me contacter</h2>
+				<form class="col-lg-8 col-md-8 col-sm-8 col-xs-12" method="post"><!--Formulaire-->
+					<div>
+						<label for="nom">Nom, Prénom</label>
+						<div id="test"><input type="text" id="nom" placeholder="Nom, prénom"/></div>
+					</div>
+					<div>
+						<label for="courriel">E-mail</label>
+						<input type="email" id="courriel" placeholder="E-mail"/>
+					</div>
+					<div>
+						<label for="object">Objet</label>
+						<input id="objet" placeholder="Objet"/>
+					</div>
+					<div>
+						<label for="message">Votre message</label>
+						<textarea id="message" placeholder="Votre message"></textarea>
+					</div>
+					<div>
+						<input type="button" onClick="formulaire()" value="Ce formulaire n'est pas encore fonctionnel"/> 
+					</div>
+				</form><!--/Formulaire-->
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+					<a href="/linkedin" class="contact_icon"><img src="image/linkedin.png"/></a>
+				</div>
+			</div>
+			</footer><!--/Footer-->
+		</div>
+	</body>
+</html>
