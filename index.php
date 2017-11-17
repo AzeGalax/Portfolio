@@ -1,24 +1,34 @@
 <?php
 	$skills = 
 	[
-		'Devlopment'=>
+		'Language'=>
 		[
-			['skill'=>'PHP', 'color'=>'red','percentage'=>70],
-			['skill'=>'MYSQL', 'color'=>'red','percentage'=>70],
-			['skill'=>'NODEJS', 'color'=>'red','percentage'=>70],
+			['skill'=>'PHP', 'color'=>'green','percentage'=>80],
+			['skill'=>'YAML', 'color'=>'green','percentage'=>70],
+			['skill'=>'MYSQL', 'color'=>'green','percentage'=>70],
+			['skill'=>'JAVASCRIPT & JQUERY', 'color'=>'orange','percentage'=>70],
+			['skill'=>'NODEJS', 'color'=>'red','percentage'=>50],
 		],
-		'Technologie'=>
+		'Moteur de templates'=>
 		[
-			['skill'=>'TWIG', 'color'=>'red','percentage'=>70],
+			['skill'=>'TWIG', 'color'=>'orange','percentage'=>50],
 		],
-		'Linux'=>
+		'Framework PHP & CSS'=>
 		[
-			['skill'=>'SYSTEM', 'color'=>'red','percentage'=>70],
+			['skill'=>'SYMFONY', 'color'=>'red','percentage'=>40],
+			['skill'=>'CAKEPHP', 'color'=>'red','percentage'=>10],
+			['skill'=>'MATERIALIZE', 'color'=>'green','percentage'=>80],
+			['skill'=>'BOOTSTRAP', 'color'=>'green','percentage'=>70],
 		],
-		'Design'=>
+		'Design & Video'=>
 		[
-			['skill'=>'PhotoShop', 'color'=>'red','percentage'=>70],
-			['skill'=>'Première Pro', 'color'=>'red','percentage'=>70],
+			['skill'=>'PHOTOSHOP', 'color'=>'green','percentage'=>60],
+			['skill'=>'PREMIERE PRO', 'color'=>'green','percentage'=>70],
+		],
+		'Other'=>
+		[
+			['skill'=>'LINUX', 'color'=>'green','percentage'=>60],
+			['skill'=>'RASPBERRY PI', 'color'=>'green','percentage'=>60],
 		],
 	];
 
@@ -56,27 +66,43 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
+		<div class="loader">
+			<div class="loader-in">
+				<div class="preloader-wrapper big-custom active">
+					<div class="spinner-layer spinner-red-only">
+						<div class="circle-clipper left">
+							<div class="circle"></div>
+						</div><div class="gap-patch">
+							<div class="circle"></div>
+						</div><div class="circle-clipper right">
+							<div class="circle"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<header>
 			<nav class="nav-extended">
 				<div class="nav-wrapper">
 					<a href="/" class="brand-logo"><div class="personal-logo"><span>Clément</span>LOIRE</div></a>
-					<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-					<!--<ul id="nav-mobile" class="right hide-on-med-and-down">
-						<li><a href="sass.html">Sass</a></li>
-						<li><a href="badges.html">Components</a></li>
-						<li><a href="collapsible.html">JavaScript</a></li>
-					</ul>-->
-					<ul class="side-nav" id="mobile-demo">
+					<!--<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+					<ul id="nav-mobile" class="right hide-on-med-and-down">
 						<li><a href="sass.html">Sass</a></li>
 						<li><a href="badges.html">Components</a></li>
 						<li><a href="collapsible.html">JavaScript</a></li>
 					</ul>
+					<ul class="side-nav" id="mobile-demo">
+						<li><a href="sass.html">Sass</a></li>
+						<li><a href="badges.html">Components</a></li>
+						<li><a href="collapsible.html">JavaScript</a></li>
+					</ul>-->
 				</div>
 				<div class="nav-content">
 					<ul class="tabs tabs-transparent">
 						<li class="tab"><a href="#about">About me</a></li>
 						<li class="tab"><a href="#skills">Skills</a></li>
 						<li class="tab"><a href="#portfolio">Portfolio</a></li>
+						<li class="tab"><a href="#contact" id="linkcontact">Contact</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -90,17 +116,16 @@
 					<div id="about-bottom" class="container">
 						<p class="caption">Bienvenue sur mon incroyablement simple portfolio, retrouvez mon cv, mes créations et d'autres informations utiles</p>
 						<div>
-							<h2>Moi</h2>
-							<p>Clément, <span id="age">..</span> ans, <strong>développeur web full-stack junior</strong> pour vous servir et améliorer le web.<br>Le développement en général m'intéresse depuis mes 10 ans, j'ai pu concrétiser cette envie lorsque j'étudiais mon <a href="">baccalauréat professionnel SEN TR</a> grâce à un ami qui m'a appris les bases du web.</p>
-						</div>
-						<div>
-							<h2>Blabla</h2>
-							<p>Some text about me</p>
+							<h2>Qui suis-je ?</h2>
+							<p>Clément, <span id="age">..</span> ans, <strong>développeur web full-stack junior</strong>.<br>Le développement m'intéresse depuis mes 10 ans, j'ai toujours eu envie de "créer" à ma guise, j'ai pu concrétiser cette envie lorsque j'étudiais mon <a href="http://portfolio-v2.clement-loire.fr/public/cursus.php">baccalauréat professionnel SEN TR</a> avec un ami qui m'a transmis les bases du web.</p>
+							<h2>Que fais je ?</h2>
+							<p>Je suis actuellement en CDI chez <a href="http://dcsolution.ch/">DCSolution</a> en la qualité de développeur web full-stack. J'y mène des projets intéréssants qui me permette d'apprendre sans cesse.<br>Lors de mon temps libre, j'apprends de nouvelles technologies où perfectionne mes compétences.<br><br>J'ai d'autres loisirs comme la moto, le work-out, la natation.</p>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div id="skills" class="container row">
+				<p class="caption">Les couleurs sont en fonction de mon niveau de maitrise<br>Les pourcentage de progression sont en fonction de mon niveau de connaissances (les languages en constante évolution, je ne considère pas le 100% possible)<br>Les niveaux de connaissances et de maîtrise peuvent être bas lorsque que je suis en train d'apprendre.</p>
 				<?php foreach($skills as $skill=>$skillsContent){ ?>
 				<div class="col s12 row">
 					<h4><?=$skill;?></h4>
@@ -140,6 +165,28 @@
 				</div>
 				<?php } ?>
 			</div>
+			<div id="contact" class="container">
+				<h3>Contact</h3>
+				<div class="row">
+					<form method="POST" class="col s12" action="/#contact">
+						<div class="input-field col s6">
+							<input id="email" type="email" class="validate">
+							<label for="email">Email</label>
+						</div>
+						<div class="input-field col s6">
+							<input id="text" type="text" class="validate">
+							<label for="text">Subject</label>
+						</div>
+						<div class="input-field col s12">
+							<textarea id="textarea1" class="materialize-textarea"></textarea>
+							<label for="textarea1">Textarea</label>
+						</div>
+						<div class="input-field col">
+							<button class="btn waves-effect waves-light" type="submit" name="message">Envoyez</button>
+						</div>
+					</form>
+				</div>
+			</div>
 		</main>
 		<footer class="page-footer">
 			<div class="container">
@@ -149,9 +196,9 @@
 						<p class="grey-text text-lighten-4">J'aime le partage et la création de site web, n'hésitez pas à me contacter pour tous projets web où autres propositions, je suis ouvert à tous.</p>
 					</div>
 					<div class="col l4 offset-l2 s12">
-						<h5 class="white-text"><a href="/contact/">Me contacter</a></h5>
+						<h5 class="white-text"><a href="#contact" class="tocontact">Me contacter</a></h5>
 						<ul>
-							<li><a class="grey-text text-lighten-3" href="/contact/">Par email</a></li>
+							<li><a class="grey-text text-lighten-3 tocontact" href="#contact">Par email</a></li>
 							<li><a class="grey-text text-lighten-3" href="https://github.com/AzeGalax">Github</a></li>
 						</ul>
 					</div>
