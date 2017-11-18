@@ -69,3 +69,22 @@ html{
 	height: 128px;
 	width: 128px;
 }
+.warning{
+	position: fixed;
+	left: 15px;
+	bottom: 15px;
+	z-index: 9999;
+}
+.warning-alert{
+	padding: 15px 20px;
+	margin-bottom: 5px;
+	position: relative;
+}
+.warning-alert.success{
+	background-color: rgba(0, 0, 10, 0.8);
+	color: #4caf50;
+}
+.warning-alert.error{
+    background-color: rgba(0, 0, 10, 0.8);
+    color: #f44336;
+}

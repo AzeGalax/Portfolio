@@ -1,64 +1,73 @@
 <?php
+	$mail = null;
+	if(isset($_POST['message'])){
+		if(!empty($_POST['name']) AND !empty($_POST['email']) AND !empty($_POST['content'])){
+			if(mail('clementloirepro@gmail.com', 'clement-loire.fr new message', 'Un e-mail à été envoyé , Nom : '.htmlspecialchars($_POST['name']).', E-mail : '.htmlspecialchars($_POST['email']).', Contenu : '.htmlspecialchars($_POST['content']))){
+				$mail = 'yes';
+			}else{
+				$mail = 'no';
+			}
+		}
+	}
 	$skills = 
 	[
-		'Language'=>
+		"Language"=>
 		[
-			['skill'=>'PHP', 'color'=>'green','percentage'=>80],
-			['skill'=>'YAML', 'color'=>'green','percentage'=>70],
-			['skill'=>'MYSQL', 'color'=>'green','percentage'=>70],
-			['skill'=>'JAVASCRIPT & JQUERY', 'color'=>'orange','percentage'=>70],
-			['skill'=>'NODEJS', 'color'=>'red','percentage'=>50],
+			["skill"=>"PHP", "color"=>"green","percentage"=>80],
+			["skill"=>"YAML", "color"=>"green","percentage"=>70],
+			["skill"=>"MYSQL", "color"=>"green","percentage"=>70],
+			["skill"=>"JAVASCRIPT & JQUERY", "color"=>"orange","percentage"=>70],
+			["skill"=>"NODEJS", "color"=>"red","percentage"=>50],
 		],
-		'Moteur de templates'=>
+		"Template engine"=>
 		[
-			['skill'=>'TWIG', 'color'=>'orange','percentage'=>50],
+			["skill"=>"TWIG", "color"=>"orange","percentage"=>50],
 		],
-		'Framework PHP & CSS'=>
+		"Framework PHP & CSS"=>
 		[
-			['skill'=>'SYMFONY', 'color'=>'red','percentage'=>40],
-			['skill'=>'CAKEPHP', 'color'=>'red','percentage'=>10],
-			['skill'=>'MATERIALIZE', 'color'=>'green','percentage'=>80],
-			['skill'=>'BOOTSTRAP', 'color'=>'green','percentage'=>70],
+			["skill"=>"SYMFONY", "color"=>"red","percentage"=>30],
+			["skill"=>"CAKEPHP", "color"=>"red","percentage"=>10],
+			["skill"=>"MATERIALIZE", "color"=>"green","percentage"=>80],
+			["skill"=>"BOOTSTRAP", "color"=>"green","percentage"=>70],
 		],
-		'Design & Video'=>
+		"Design & Video"=>
 		[
-			['skill'=>'PHOTOSHOP', 'color'=>'green','percentage'=>60],
-			['skill'=>'PREMIERE PRO', 'color'=>'green','percentage'=>70],
+			["skill"=>"PHOTOSHOP", "color"=>"green","percentage"=>60],
+			["skill"=>"PREMIERE PRO", "color"=>"green","percentage"=>70],
 		],
-		'Other'=>
+		"Other"=>
 		[
-			['skill'=>'LINUX', 'color'=>'green','percentage'=>60],
-			['skill'=>'RASPBERRY PI', 'color'=>'green','percentage'=>60],
+			["skill"=>"LINUX (Debian, Ubuntu, Pi, Centos)", "color"=>"green","percentage"=>60],
 		],
 	];
 
 	$portfolio = 
 	[
-		'Personnel'=>
+		"Personnel"=>
 		[
-			['title'=>'Epreuve E6 - BTS SIO', 'img'=>'/assets/img/e6.jpg', 'text'=>'Le site prévu pour l\'épreuve E6 de mon BTS SIO.', 'href'=>'http://e6.clement-loire.fr/'],
-			['title'=>'Landing Page', 'img'=>'/assets/img/landingpage.jpg', 'text'=>'Avant mon stage chez Texto l\'Agence, je n\'avais que de simples bases en programmation web. Ce stage m\'a initié à Bootsrap, Jquery, PHP, Javascript, Photoshop. J\'ai aussi acquéris une certaine logique de réflexion, "réflexion" qui distingue le programmeur du bon programmeur.', 'href'=>'/projects/landing-page/'],
-			['title'=>'Mon portfolio V1', 'img'=>'/assets/img/perso-1.jpg', 'text'=>'La 1ère version de mon portfolio pesonnel, j\'ai appris l\'HTML et le CSS avec ce projet', 'href'=>'http://portfolio-v1.clement-loire.fr/'],
-			['title'=>'Mon portfolio V2', 'img'=>'/assets/img/perso-2.jpg', 'text'=>'La 2ème version de mon portfolio pesonnel, j\'ai créez ce site afin de remettre à jour mon portfolio avec mes dernières connaissances.', 'href'=>'http://portfolio-v2.clement-loire.fr/'],
-			['title'=>'Private', 'img'=>'/assets/img/private.jpg', 'text'=>'J\'ai créé ce repo après avoir terminé mon site web vitrine afin de poser mes projets et d\'y accéder depuis Internet. Un système de compte permet au monde entier d\'y accéder afin de profiter de mes projets.', 'href'=>'https://private.clement-loire.fr/'],
-			['title'=>'Son of A Bitch', 'img'=>'/assets/img/sob.jpg', 'text'=>'Un site pour un ami loufoque.', 'href'=>'http://sonofabitch.fr/'],
+			["title"=>"Portfolio V1", "img"=>"/assets/img/perso-1.jpg", "text"=>"First version of my personal portfolio, I learn HTML & CSS with this little project.", "href"=>"http://portfolio-v1.clement-loire.fr/"],
+			["title"=>"Portfolio V2", "img"=>"/assets/img/perso-2.jpg", "text"=>"Second version of my personal portfolio, I build this website to update my showcase with my last knowledge.", "href"=>"http://portfolio-v2.clement-loire.fr/"],
+			["title"=>"E6 Exam - BTS SIO", "img"=>"/assets/img/e6.jpg", "text"=>"Showcase website to present my E6 exam, presentation of my projects, activities when I was in alternating degree.", "href"=>"http://e6.clement-loire.fr/"],
+			["title"=>"Landing Page - Stage", "img"=>"/assets/img/landingpage.jpg", "text"=>"Before my internship at <a target='blank' href='http://www.agence-texto.fr/'>Texto l'Agence</a>, I had only simple bases in web programming. This internship introduced me to Bootsrap, Jquery, PHP, Javascript, Photoshop. I also acquired a certain logic of reflection.", "href"=>"/projects/landing-page/"],
+			["title"=>"Private - Repo", "img"=>"/assets/img/private.jpg", "text"=>"I creat this repo after my 2nd portfolio version to push my projects and access it on Internet.", "href"=>"https://private.clement-loire.fr/"],
+			["title"=>"Son of A Bitch", "img"=>"/assets/img/sob.jpg", "text"=>"Showcase website of a friend with a pretty crazy project.", "href"=>"http://sonofabitch.fr/"],
 		],
-		'Professionnel'=>
+		"Professionnel"=>
 		[
-			['title'=>'Tomme de Savoie', 'img'=>'/assets/img/tommesavoie.jpg', 'text'=>'Le logo du site officiel de la Tomme de Savoie J\'ai pu "opérer" ce site lors de mon stage chez Texto l\'Agence, le logo du site à été mis à jour, j\'ai donc pu le changer en adaptant les dimensions pour garder le même layout.', 'href'=>'http://www.tomme-de-savoie.com/'],
-			['title'=>'Saucisse de Morteau', 'img'=>'/assets/img/saucissemorteau.jpg', 'text'=>'Le site officiel de la Saucisse de Morteau J\'ai pu "opérer" ce site lors de mon stage chez Texto l\'Agence, j\'ai déplacer du code au bon endroit afin de faire fonctionner le clic sur les régions pour voir la vidéo descriptive. J\'ai aussi recenser les vidéos correspondant aux bonnes régions.', 'href'=>'http://www.saucissedemorteau.com/savoureuse/la-morteau-a-travers-les-regions'],
-			['title'=>'Emmental de Savoie', 'img'=>'/assets/img/emmentalsavoie.jpg', 'text'=>'Le logo du site officiel de l\'Emmental de Savoie. J\'ai pu "opérer" ce site lors de mon stage chez Texto l\'Agence, le logo du site à été mis à jour, j\'ai donc pu le changer en adaptant les dimensions pour garder le même layout. Le logo de ce site est un png composé d\'inscription blanche car la couleur du background les fait ressortir.', 'href'=>'http://www.emmental-de-savoie.com/'],
-			['title'=>'DCMedia', 'img'=>'/assets/img/dcmedia.jpg', 'text'=>'Un projet confidentiel qui m\'a été confié par DCSolution, entreprise dans laquelle je suis en alternance.', 'href'=>'https://dcmedia.ch/'],
-			['title'=>'DCSolution', 'img'=>'/assets/img/incoming.png', 'text'=>'DCSolution site', 'href'=>'http://dcsolution.ch/'],
+			["title"=>"Tomme de Savoie", "img"=>"/assets/img/tommesavoie.jpg", "text"=>"During my internship at texto agency, I modify this website logo.", "href"=>"http://www.tomme-de-savoie.com/"],
+			["title"=>"Saucisse de Morteau", "img"=>"/assets/img/saucissemorteau.jpg", "text"=>"During my internship at texto agency, I modify code on this website to make the map functionnality work.", "href"=>"http://www.saucissedemorteau.com/savoureuse/la-morteau-a-travers-les-regions"],
+			["title"=>"Emmental de Savoie", "img"=>"/assets/img/emmentalsavoie.jpg", "text"=>"During my internship at texto agency, I modify this website logo", "href"=>"http://www.emmental-de-savoie.com/"],
+			["title"=>"DCMedia", "img"=>"/assets/img/dcmedia.jpg", "text"=>"A confidential project entrusted by DCSolution", "href"=>"https://dcmedia.ch/"],
+			["title"=>"DCSolution", "img"=>"/assets/img/incoming.png", "text"=>"DCSolution showcase website", "href"=>"http://dcsolution.ch/"],
 		]
 	];
-	$visitLink = 'Visiter';
+	$visitLink = "Visit";
 ?><!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 	<head>
-		<title>Clément LOIRE | Portfolio</title>
+		<title>Portfolio | Clément LOIRE</title>
 		<meta charset="utf-8">
-		<meta name="description" content="">
+		<meta name="description" content="Welcome, here is my incredibly simple portfolio, you can find my resume, my portfolio, my skills and you can contact me !">
 		<link rel="stylesheet" type="text/css" href="/assets/css/main.css">
 		<link rel="stylesheet" type="text/css" href="/assets/css/materialize.css">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Fredoka+One" rel="stylesheet">
@@ -114,18 +123,21 @@
 						<div id="about-top-perso" class="circle z-depth-5"></div>
 					</div>
 					<div id="about-bottom" class="container">
-						<p class="caption">Bienvenue sur mon incroyablement simple portfolio, retrouvez mon cv, mes créations et d'autres informations utiles</p>
+						<p class="caption">Welcome, here is my incredibly simple portfolio, you can find my resume, my portfolio, my skills and you can contact me !</p>
 						<div>
-							<h2>Qui suis-je ?</h2>
-							<p>Clément, <span id="age">..</span> ans, <strong>développeur web full-stack junior</strong>.<br>Le développement m'intéresse depuis mes 10 ans, j'ai toujours eu envie de "créer" à ma guise, j'ai pu concrétiser cette envie lorsque j'étudiais mon <a href="http://portfolio-v2.clement-loire.fr/public/cursus.php">baccalauréat professionnel SEN TR</a> avec un ami qui m'a transmis les bases du web.</p>
-							<h2>Que fais je ?</h2>
-							<p>Je suis actuellement en CDI chez <a href="http://dcsolution.ch/">DCSolution</a> en la qualité de développeur web full-stack. J'y mène des projets intéréssants qui me permette d'apprendre sans cesse.<br>Lors de mon temps libre, j'apprends de nouvelles technologies où perfectionne mes compétences.<br><br>J'ai d'autres loisirs comme la moto, le work-out, la natation.</p>
+							<h2>Who am I ?</h2>
+							<p>
+								Clément, <span id="age">..</span> years old, <a href="https://medium.com/udacity/what-is-a-full-stack-web-developer-and-why-should-i-become-one-6e93d0c774b6" target="blank"><strong>full-stack junior web developer</strong></a>.<br>
+								Since my 10 years, I wanted to create, build incredible thing, the world wide web offer this possibility, I was able to concretize this idea when I studied my <a target="blank" href="http://portfolio-v2.clement-loire.fr/public/cursus.php">professional baccalaureate SEN TR</a> with a friend who transmitted me the web basics.</p>
+							<h2>What do I do ?</h2>
+							<p>I am currently on a permanent contract in <a target="blank" href="http://dcsolution.ch/">DCSolution</a> as a full-stack web developer. I lead interesting projects that allow me to learn constantly.<br>In my free time, I learn new technologies to improve my skills.<br><br>I have other hobbies like bike and motorbike, work-out, swimming..</p>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div id="skills" class="container row">
-				<p class="caption">Les couleurs sont en fonction de mon niveau de maitrise<br>Les pourcentage de progression sont en fonction de mon niveau de connaissances (les languages en constante évolution, je ne considère pas le 100% possible)<br>Les niveaux de connaissances et de maîtrise peuvent être bas lorsque que je suis en train d'apprendre.</p>
+				<h3>Skills</h3>
+				<p class="caption">The colors are according to my mastery level and percentage progression is according to my knowledge level.</p>
 				<?php foreach($skills as $skill=>$skillsContent){ ?>
 				<div class="col s12 row">
 					<h4><?=$skill;?></h4>
@@ -167,25 +179,40 @@
 			</div>
 			<div id="contact" class="container">
 				<h3>Contact</h3>
+				<p class="caption">Do not hesitate to contact me about your projects of all kinds.</p>
 				<div class="row">
 					<form method="POST" class="col s12" action="/#contact">
 						<div class="input-field col s6">
-							<input id="email" type="email" class="validate">
+							<input id="email" type="email" class="validate" name="email">
 							<label for="email">Email</label>
 						</div>
 						<div class="input-field col s6">
-							<input id="text" type="text" class="validate">
+							<input id="text" type="text" class="validate" name="subject">
 							<label for="text">Subject</label>
 						</div>
 						<div class="input-field col s12">
-							<textarea id="textarea1" class="materialize-textarea"></textarea>
-							<label for="textarea1">Textarea</label>
+							<textarea id="textarea1" class="materialize-textarea" name="content"></textarea>
+							<label for="textarea1">Message</label>
 						</div>
 						<div class="input-field col">
-							<button class="btn waves-effect waves-light" type="submit" name="message">Envoyez</button>
+							<button class="btn waves-effect waves-light" type="submit" name="message">Send</button>
 						</div>
 					</form>
 				</div>
+				<?php if($mail == 'yes'){ ?>
+				<div class="warning">
+					<div class="warning-alert success">
+						<span>Message sent successfully</span>
+					</div>
+				</div>
+				<?php } ?>
+				<?php if($mail == 'no'){ ?>
+				<div class="warning">
+					<div class="warning-alert error">
+						<span>Error while sending the message</span>
+					</div>
+				</div>
+				<?php } ?>
 			</div>
 		</main>
 		<footer class="page-footer">
@@ -193,12 +220,12 @@
 				<div class="row">
 					<div class="col l6 s12">
 						<h5 class="white-text"><div class="personal-logo"><span>Clément</span>LOIRE</div></h5>
-						<p class="grey-text text-lighten-4">J'aime le partage et la création de site web, n'hésitez pas à me contacter pour tous projets web où autres propositions, je suis ouvert à tous.</p>
+						<p class="grey-text text-lighten-4">I like sharing and website creation, do not hesitate to contact me for any web projects or other proposals, I am open to all.</p>
 					</div>
 					<div class="col l4 offset-l2 s12">
-						<h5 class="white-text"><a href="#contact" class="tocontact">Me contacter</a></h5>
+						<h5 class="white-text"><a href="#contact" class="tocontact">Contact me</a></h5>
 						<ul>
-							<li><a class="grey-text text-lighten-3 tocontact" href="#contact">Par email</a></li>
+							<li><a class="grey-text text-lighten-3 tocontact" href="#contact">Email</a></li>
 							<li><a class="grey-text text-lighten-3" href="https://github.com/AzeGalax">Github</a></li>
 						</ul>
 					</div>
