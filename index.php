@@ -43,7 +43,7 @@
 
 	$portfolio = 
 	[
-		"Personnel"=>
+		"Personal"=>
 		[
 			["title"=>"Portfolio V1", "img"=>"/assets/img/perso-1.jpg", "text"=>"First version of my personal portfolio, I learn HTML & CSS with this little project.", "href"=>"http://portfolio-v1.clement-loire.fr/"],
 			["title"=>"Portfolio V2", "img"=>"/assets/img/perso-2.jpg", "text"=>"Second version of my personal portfolio, I build this website to update my showcase with my last knowledge.", "href"=>"http://portfolio-v2.clement-loire.fr/"],
