@@ -1,8 +1,8 @@
 <?php
 	$mail = null;
 	if(isset($_POST['message'])){
-		if(!empty($_POST['name']) AND !empty($_POST['email']) AND !empty($_POST['content'])){
-			if(mail('clementloirepro@gmail.com', 'clement-loire.fr new message', 'Un e-mail à été envoyé , Nom : '.htmlspecialchars($_POST['name']).', E-mail : '.htmlspecialchars($_POST['email']).', Contenu : '.htmlspecialchars($_POST['content']))){
+		if(!empty($_POST['subject']) AND !empty($_POST['email']) AND !empty($_POST['content'])){
+			if(mail('clementloirepro@gmail.com', 'clement-loire.fr new message', 'Un e-mail à été envoyé ,<br>Sujet : '.htmlspecialchars($_POST['subject']).',<br>E-mail : '.htmlspecialchars($_POST['email']).',<br>Contenu : '.htmlspecialchars($_POST['content']))){
 				$mail = 'yes';
 			}else{
 				$mail = 'no';
@@ -130,7 +130,7 @@
 								Clément, <span id="age">..</span> years old, <a href="https://medium.com/udacity/what-is-a-full-stack-web-developer-and-why-should-i-become-one-6e93d0c774b6" target="blank"><strong>full-stack junior web developer</strong></a>.<br>
 								Since my 10 years, I wanted to create, build incredible thing, the world wide web offer this possibility, I was able to concretize this idea when I studied my <a target="blank" href="http://portfolio-v2.clement-loire.fr/public/cursus.php">professional baccalaureate SEN TR</a> with a friend who transmitted me the web basics.</p>
 							<h2>What do I do ?</h2>
-							<p>I am currently on a permanent contract in <a target="blank" href="http://dcsolution.ch/">DCSolution</a> as a full-stack web developer. I lead interesting projects that allow me to learn constantly.<br>In my free time, I learn new technologies to improve my skills.<br><br>I have other hobbies like bike and motorbike, work-out, swimming..</p>
+							<p>I am currently on a permanent contract in <a target="blank" href="http://dcsolution.ch/">DCSolution</a> as a full-stack web developer. I lead interesting projects that allow me to learn constantly.<br>During my free time, I learn new technologies to improve my skills.<br><br>I have other hobbies like bike and motorbike, work-out, swimming..</p>
 						</div>
 					</div>
 				</div>
@@ -241,4 +241,12 @@
 	<script type="text/javascript" src="/assets/js/jquery.js"></script>
 	<script type="text/javascript" src="/assets/js/materialize.js"></script>
 	<script type="text/javascript" src="/assets/js/init.js"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109899933-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-109899933-1');
+	</script>
 </html>
